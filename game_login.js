@@ -7,6 +7,11 @@ function addUser (){
 
     localStorage.setItem("player2Name", player2Name);
 
-    window.location = "game_page.html";
+    var score = prompt("How many points do you want to play to?", 0);
 
+    if(score > 0){
+        localStorage.setItem("setScore", score);
+
+        window.location = "game_page.html";
+    }
 }
